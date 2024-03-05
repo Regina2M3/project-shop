@@ -1,4 +1,6 @@
+require('@babel/register');
 require('dotenv').config();
+
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
@@ -6,35 +8,31 @@ const path = require('path');
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 
-const apiRouter = require('./src/routes/api.router');
-
 const app = express();
-
-const { PORT, SESSION_SECRET } = process.env;
+const { PORT, SECRET_KEY_SESSION } = process.env;
 
 const sessionConfig = {
-  name: 'cooks',
+  name: 'cookies',
   store: new FileStore(),
-  secret: process.env.SESSION_SECRET ?? 'soda',
+  secret: process.env.SECRET_KEY_SESSION ?? 'github',
   resave: false,
   saveUninitialized: false,
   cookie: {
-    maxAge: 24 * 1000 * 60 * 60,
+    maxAge: 1000 * 60 * 60 * 24,
     httpOnly: true,
   },
 };
-// const dbConnectionCheck = require('../db/dbConnectCheck');
 
-app.use(session(sessionConfig));
-
-app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(morgan('dev'));
 app.use(express.static(path.join(process.cwd(), 'public')));
-// dbConnectionCheck();
+app.use(session(sessionConfig));
+
+const apiRouter = require('./src/routes/api.router');
+
+// const { secureRoute } = require('./middelwares/common');
 
 app.use('/', apiRouter);
 
-app.listen(PORT, function () {
-  console.log(`Server listening at http://localhost:${this.address().port}`);
-});
+app.listen(PORT, () => console.log(`Сервер запущен: http://localhost:${PORT}`));

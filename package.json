@@ -2,10 +2,9 @@
     "name": "project-shop",
     "version": "1.0.0",
     "description": "Пожалуйста, постарайтесь справиться",
-    "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "nodemon src/app.js --ignore sessions --ext js,jsx",
+        "dev": "nodemon app.js --ignore sessions --ext js,jsx",
         "start": "node src/app.js",
         "dbInit": "npx sequelize-cli init",
         "dbRebuild": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all"

@@ -19,18 +19,25 @@ module.exports = function Layout({ children, login }) {
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
           crossOrigin="anonymous"
         />
-        <link rel="stylesheet" href="/css/style.css" />
-        <title>Eltube</title>
+        <link rel="stylesheet" href="#" />
+        <title>jmyh</title>
       </head>
       <header>
         {login ? (
-          <nav className="navbar navbar-expand-lg bg-light">
-            <div className="container-fluid">
-              <a className="navbar-brand" src="/assets/favicon.ico" href="/">
-                Домой
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/">
+              <img
+                  src="/assets/giflogocrop.gif"
+                  alt="test"
+                  style={{ width: '250px', height: '100px' }}
+                />
+              </a>
+              <a className ='cart' href="/cart">
+                <img src="/assets/layer1.svg" alt="cart" />
               </a>
               <button
-                className="navbar-toggler"
+                class="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarNav"
@@ -38,21 +45,28 @@ module.exports = function Layout({ children, login }) {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                <span className="navbar-toggler-icon" />
+                <span class="navbar-toggler-icon"></span>
               </button>
-              <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav">
-                  <li className="nav-item">
-                    <div className="nav-link">{login}</div>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="/profile">
-                      Профиль
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">
+                      Каталог
                     </a>
                   </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="/logout">
-                      Выйти
+                  <li class="nav-item">
+                    <a class="nav-link" href="/">
+                      Featuressss
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/">
+                      Pricing
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">
+                      Disabled
                     </a>
                   </li>
                 </ul>
@@ -60,13 +74,20 @@ module.exports = function Layout({ children, login }) {
             </div>
           </nav>
         ) : (
-          <nav className="navbar navbar-expand-lg bg-light">
-            <div className="container-fluid">
-              <a className="navbar-brand" href="/">
-                Home
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img
+                  src="/assets/giflogocrop.gif"
+                  alt="test"
+                  style={{ width: '250px', height: '100px' }}
+                />
               </a>
+              <span className='nav-text'>
+                твой любимый <br /> грибной бренд
+              </span>
               <button
-                className="navbar-toggler"
+                class="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarNav"
@@ -74,18 +95,28 @@ module.exports = function Layout({ children, login }) {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                <span className="navbar-toggler-icon" />
+                <span class="navbar-toggler-icon"></span>
               </button>
-              <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav">
-                  <li className="nav-item">
-                    <a className="nav-link" href="/channel">
-                      Каналы
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">
+                      Каталог
                     </a>
                   </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="/register">
-                      Регистрация
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      О нас
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      Контакты 
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">
+                      Хочу сотрудничать!
                     </a>
                   </li>
                 </ul>
