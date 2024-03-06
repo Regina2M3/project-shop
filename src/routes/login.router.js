@@ -7,6 +7,7 @@ const { User } = require('../../db/models');
 const LoginPage = require('../views/Login.jsx');
 
 logRouter.get('/', (req, res) => {
+  const { login } = req.session;
   renderTemplate(LoginPage, {}, res);
 });
 
@@ -19,6 +20,7 @@ logRouter.post('/', async (req, res) => {
       if (checkPassword) {
         req.session.login = user.login;
         req.session.userId = user.id;
+        req.session.isSeller = user.isSeller;
         req.session.save(() => {
           console.log('Session saved.');
         });

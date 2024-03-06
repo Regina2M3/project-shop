@@ -8,6 +8,7 @@ const { User } = require('../../db/models');
 const Registration = require('../views/Reg.jsx');
 
 regRouter.get('/', (req, res) => {
+  const { login } = req.session;
   renderTemplate(Registration, null, res);
 });
 

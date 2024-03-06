@@ -3,7 +3,7 @@ const Layout = require('./Layout');
 
 function Home({ login }) {
   return (
-    <Layout>
+    <Layout login = { login }>
       {login ? (
         <>
           <div

@@ -12,9 +12,10 @@ const { Good } = require('../../db/models');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
+  const { login, isSeller } = req.session;
   const goods = await Good.findAll();
 
-  renderTemplate(Catalog, { goods }, res);
+  renderTemplate(Catalog, { goods, login, isSeller }, res);
 });
 
 module.exports = router;

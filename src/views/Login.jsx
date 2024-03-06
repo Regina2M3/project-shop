@@ -2,9 +2,9 @@ const React = require('react');
 
 const Layout = require('../views/Layout');
 
-module.exports = function LoginPage() {
+module.exports = function LoginPage({ login }) {
   return (
-    <Layout>
+    <Layout login = { login }>
       <link rel="stylesheet" href="#" />
       <h2 style={{ textAlign: 'center' }}>
         Для входа в аккаунт введите Логин и пароль:

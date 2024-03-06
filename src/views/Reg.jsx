@@ -2,9 +2,9 @@ const React = require('react');
 
 const Layout = require('./Layout');
 
-module.exports = function Registration() {
+module.exports = function Registration({ login }) {
   return (
-    <Layout>
+    <Layout login = { login }>
       <link rel="stylesheet" href="#" />
       <div className="formContainer">
         <form

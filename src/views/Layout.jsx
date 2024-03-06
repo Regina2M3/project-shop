@@ -33,9 +33,6 @@ module.exports = function Layout({ children, login }) {
                   style={{ width: '250px', height: '100px' }}
                 />
               </a>
-              <a className="cart" href="/cart">
-                <img src="/assets/layer1.svg" alt="cart" />
-              </a>
               <span className="nav-text">
                 твой любимый <br /> грибной бренд
               </span>
@@ -53,8 +50,8 @@ module.exports = function Layout({ children, login }) {
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">
-                      Каталог
+                    <a class="nav-link active" aria-current="page" href="/catalog">
+                      Каталог auth
                     </a>
                   </li>
                   <li class="nav-item">
@@ -77,12 +74,8 @@ module.exports = function Layout({ children, login }) {
                       <img src="/assets/layer1.svg" alt="cart" />
                     </a>
                   </li>
-                  <li>
-                    <a className="cart" href="/cart">
-                      <img src="/assets/layer1.svg" alt="cart" />
-                    </a>
-                  </li>
                 </ul>
+                <a href="/logout"><button type="button" className="btn btn-danger">Выйти</button></a>
               </div>
             </div>
           </nav>
@@ -113,8 +106,8 @@ module.exports = function Layout({ children, login }) {
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">
-                      Каталог
+                    <a class="nav-link active" aria-current="page" href="/catalog">
+                      Каталог no auth
                     </a>
                   </li>
                   <li class="nav-item">
