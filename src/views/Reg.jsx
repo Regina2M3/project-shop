@@ -31,7 +31,7 @@ module.exports = function Registration() {
           <label htmlFor="form_email" className="form-label">
             E-mail
           </label>
-          <input name="mail" type="e-mail" className="input" id="form_mail" />
+          <input name="email" type="e-mail" className="input" id="form_mail" />
 
           <select
             class="form-select"

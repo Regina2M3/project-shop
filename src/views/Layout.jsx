@@ -27,15 +27,18 @@ module.exports = function Layout({ children, login }) {
           <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand" href="/">
-              <img
+                <img
                   src="/assets/giflogocrop.gif"
                   alt="test"
                   style={{ width: '250px', height: '100px' }}
                 />
               </a>
-              <a className ='cart' href="/cart">
+              <a className="cart" href="/cart">
                 <img src="/assets/layer1.svg" alt="cart" />
               </a>
+              <span className="nav-text">
+                твой любимый <br /> грибной бренд
+              </span>
               <button
                 class="navbar-toggler"
                 type="button"
@@ -56,17 +59,27 @@ module.exports = function Layout({ children, login }) {
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="/">
-                      Featuressss
+                      О нас
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="/">
-                      Pricing
+                      Контакты
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link disabled" aria-disabled="true">
-                      Disabled
+                      Хочу сотрудничать!
+                    </a>
+                  </li>
+                  <li>
+                    <a className="cart" href="/cart">
+                      <img src="/assets/layer1.svg" alt="cart" />
+                    </a>
+                  </li>
+                  <li>
+                    <a className="cart" href="/cart">
+                      <img src="/assets/layer1.svg" alt="cart" />
                     </a>
                   </li>
                 </ul>
@@ -83,7 +96,7 @@ module.exports = function Layout({ children, login }) {
                   style={{ width: '250px', height: '100px' }}
                 />
               </a>
-              <span className='nav-text'>
+              <span className="nav-text">
                 твой любимый <br /> грибной бренд
               </span>
               <button
@@ -111,7 +124,7 @@ module.exports = function Layout({ children, login }) {
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">
-                      Контакты 
+                      Контакты
                     </a>
                   </li>
                   <li class="nav-item">
