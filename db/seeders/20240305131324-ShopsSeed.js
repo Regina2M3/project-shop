@@ -5,37 +5,145 @@ module.exports = {
       'Categories',
       [
         {
-          title: 'shirt',
+          title: 'футболки',
         },
         {
-          title: 'longsleeve',
+          title: 'свитшоты',
+        },
+        {
+          title: 'носки',
+        },
+        {
+          title: 'стикеры',
+        },
+        {
+          title: 'значки',
         },
       ],
-      {},
+      {}
     );
     await queryInterface.bulkInsert(
       'Goods',
       [
         {
-          name: 'tishka',
+          name: 'Футболка-оверсайз HAVE NO FEAR, MY CHILD серая',
           category: 1,
-          description: 'cool t-shirt',
-          price: '5000 rub.',
-          amount: 15,
+          description: 'Состав: 100% хлопок',
+          price: '1 850 rub.',
+          amount: 25,
           picture:
-            'https://media.istockphoto.com/id/1361394182/photo/funny-british-shorthair-cat-portrait-looking-shocked-or-surprised.jpg?s=612x612&w=0&k=20&c=6yvVxdufrNvkmc50nCLCd8OFGhoJd6vPTNotl90L-vo=',
+            'https://d2j6dbq0eux0bg-cdn.ecwid.net/images/62872081/4098254063.jpg',
         },
         {
-          name: 'hoodie White',
+          name: 'Футболка-оверсайз "Кибержмых" белая',
+          category: 1,
+          description: 'Состав: 100% хлопок',
+          price: '1 350 rub.',
+          amount: 15,
+          picture:
+            'https://d2j6dbq0eux0bg-cdn.ecwid.net/images/62872081/4099313522.jpg',
+        },
+        {
+          name: 'Футболка-оверсайз TOXIC DEMON',
+          category: 1,
+          description: 'Состав: 100% хлопок',
+          price: '1 250 rub.',
+          amount: 15,
+          picture:
+            'https://d2j6dbq0eux0bg-cdn.ecwid.net/images/62872081/3993003896.jpg',
+        },
+        {
+          name: 'Футболка ВСЕ В МОЕЙ ГОЛОВЕ',
+          category: 1,
+          description: 'Состав: 100% хлопок',
+          price: '1 250 rub.',
+          amount: 15,
+          picture:
+            'https://d2j6dbq0eux0bg-cdn.ecwid.net/images/62872081/3964230693.jpg',
+        },
+        {
+          name: 'Свитшот HAVE NO FEAR, MY CHILD небесно-голубой',
           category: 2,
-          description: 'cool hoodie',
-          price: '8000 rub.',
+          description: 'Состав: 80% хлопок, 20% полиэстер. Шелкография.',
+          price: '3 850 rub.',
+          amount: 20,
+          picture:
+            'https://d2j6dbq0eux0bg-cdn.ecwid.net/images/62872081/4101438761.jpg',
+        },
+        {
+          name: 'Свитшот HAVE NO FEAR, MY CHILD черный',
+          category: 2,
+          description: 'Состав: 80% хлопок, 20% полиэстер. Шелкография.',
+          price: '3 850 rub.',
+          amount: 20,
+          picture:
+            'https://d2j6dbq0eux0bg-cdn.ecwid.net/images/62872081/4101462422.jpg',
+        },
+        {
+          name: 'Носки "GOREFIELD"',
+          category: 3,
+          description: 'Эти носки – ключ к приключению на каждом шагу, смело вносящие в ваш образ нотку безумия и уникальности.',
+          price: '450 rub.',
+          amount: 35,
+          picture:
+            'https://d2j6dbq0eux0bg-cdn.ecwid.net/images/62872081/4099348698.jpg',
+        },
+        {
+          name: 'Носки МУХОМОРЫ',
+          category: 3,
+          description: 'Представьте, вы идете по лесу, и вдруг видите загадочный гриб с белыми пятнами. "О, как красиво!" - думаете вы. Нагибаетесь, чтобы рассмотреть получше... и обнаруживаете, что это вовсе не гриб, а ваш носок!',
+          price: '450 rub.',
+          amount: 35,
+          picture:
+            'https://d2j6dbq0eux0bg-cdn.ecwid.net/images/62872081/4099355282.jpg',
+        },
+        {
+          name: 'Носки АНГЕЛЫ',
+          category: 3,
+          description: 'Носки с ангелами от нашего бренда в эстетике Dreamcore, мягкие и качественные! Автор дизайна: Анна Мальмстрем',
+          price: '490 rub.',
+          amount: 30,
+          picture:
+            'https://d2j6dbq0eux0bg-cdn.ecwid.net/images/62872081/3964230655.jpg',
+        },
+        {
+          name: 'Стикерпак "Yabujincore"',
+          category: 4,
+          description: 'Виниловый голографический стикерпак с резкой и матовой ламинацией формата. Не боится воды',
+          price: '350 rub.',
+          amount: 20,
+          picture:
+            'https://d2j6dbq0eux0bg-cdn.ecwid.net/images/62872081/4101527571.jpg',
+        },
+        {
+          name: 'Стикерпак "Грибы" А5',
+          category: 4,
+          description: 'Виниловый стикерпак с матовой ламинацией и резкой, не стирается, не боится воды',
+          price: '350 rub.',
+          amount: 40,
+          picture:
+            'https://d2j6dbq0eux0bg-cdn.ecwid.net/images/62872081/4075138670.jpg',
+        },
+        {
+          name: 'Металлический пин "Кумар"',
+          category: 5,
+          description: 'Металлический пин с двумя креплениями и "бензиновым" покрытием',
+          price: '550 rub.',
           amount: 10,
           picture:
-            'https://media.istockphoto.com/id/1361394182/photo/funny-british-shorthair-cat-portrait-looking-shocked-or-surprised.jpg?s=612x612&w=0&k=20&c=6yvVxdufrNvkmc50nCLCd8OFGhoJd6vPTNotl90L-vo=',
+            'https://d2j6dbq0eux0bg-cdn.ecwid.net/images/62872081/4101991512.jpg',
+        },
+        {
+          name: 'Пин "Козочка" светящийся',
+          category: 5,
+          description: 'Металлический пин 35м. Светится в ультрафиолете!',
+          price: '450 rub.',
+          amount: 10,
+          picture:
+            'https://d2j6dbq0eux0bg-cdn.ecwid.net/images/62872081/4022154166.jpg',
         },
       ],
-      {},
+      {}
     );
   },
 

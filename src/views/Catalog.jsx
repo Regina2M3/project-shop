@@ -21,6 +21,7 @@ module.exports = function Catalog({ goods, login, isSeller }) {
                 style={{
                   display: 'flex',
                   flexDirection: 'row',
+                  gap: '20px',
                 }}
               >
                 <button
@@ -28,25 +29,43 @@ module.exports = function Catalog({ goods, login, isSeller }) {
                   className="btn btn-outline-secondary"
                   data-bs-toggle="modal"
                   data-bs-target="#loginModal"
+                  style={{
+                    width: '190px',
+                    height: '150px',
+                  }}
                 >
                   add item
                 </button>
                 {goods.map((good) => (
                   <>
-                    <div className="goods" key={good.id}>
-                      <img src={good.picture} alt="goodpic" />
-                    </div>
-                    <div className="name">{good.name}</div>
-                    <div className="link-container">
-                      <div className="good-link">
-                        <a href={`good/show/${good.id}`}>show</a>
+                    <div
+                      className="goods"
+                      key={good.id}
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                      }}
+                    >
+                      <img
+                        src={good.picture}
+                        alt="goodpic"
+                        style={{
+                          width: '150px',
+                        }}
+                      />
+
+                      <div className="name">{good.name}</div>
+                      <div className="link-container">
+                        <div className="good-link">
+                          <a href={`good/show/${good.id}`}>show</a>
+                        </div>
+                        <div className="good-link">
+                          <a href={`goods/edit/${good.id}`}>edit</a>
+                        </div>
+                        <button className="delBtn" type="button" id={good.id}>
+                          delete
+                        </button>
                       </div>
-                      <div className="good-link">
-                        <a href={`goods/edit/${good.id}`}>edit</a>
-                      </div>
-                      <button className="delBtn" type="button" id={good.id}>
-                        delete
-                      </button>
                     </div>
                   </>
                 ))}
@@ -170,11 +189,23 @@ module.exports = function Catalog({ goods, login, isSeller }) {
               </div>
             </>
           ) : (
-            <div className="good-container">
+            <div
+              className="good-container"
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+              }}
+            >
               {goods.map((good) => (
                 <>
                   <div className="goods" key={good.id}>
-                    <img src={good.picture} alt="goodpic" />
+                    <img
+                      src={good.picture}
+                      alt="goodpic"
+                      style={{
+                        width: '150px',
+                      }}
+                    />
                   </div>
                   <div className="name">{good.name}</div>
                   <div className="link-container">

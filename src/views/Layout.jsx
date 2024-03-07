@@ -33,7 +33,12 @@ module.exports = function Layout({ children, login }) {
                   style={{ width: '250px', height: '100px' }}
                 />
               </a>
-              <span className="nav-text">
+              <span
+                className="nav-text"
+                style={{
+                  marginRight: '50px',
+                }}
+              >
                 твой любимый <br /> грибной бренд
               </span>
               <button
@@ -50,17 +55,21 @@ module.exports = function Layout({ children, login }) {
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/catalog">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="/catalog"
+                    >
                       Каталог auth
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/">
+                    <a class="nav-link" href="/about">
                       О нас
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/">
+                    <a class="nav-link" href="/contacts">
                       Контакты
                     </a>
                   </li>
@@ -69,27 +78,34 @@ module.exports = function Layout({ children, login }) {
                       Хочу сотрудничать!
                     </a>
                   </li>
-                  <li>
-                    <a className="cart" href="/cart">
-                      <img src="/assets/layer1.svg" alt="cart" />
-                    </a>
-                  </li>
                 </ul>
-                <a href="/logout"><button type="button" className="btn btn-danger">Выйти</button></a>
               </div>
+              <a className="cart" href="/cart">
+                <img src="/assets/layer1.svg" alt="cart" />
+              </a>
+              <a href="/logout">
+                <button type="button" className="btn btn-danger">
+                  Выйти
+                </button>
+              </a>
             </div>
           </nav>
         ) : (
           <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="/">
                 <img
                   src="/assets/giflogocrop.gif"
                   alt="test"
                   style={{ width: '250px', height: '100px' }}
                 />
               </a>
-              <span className="nav-text">
+              <span
+                className="nav-text"
+                style={{
+                  marginRight: '50px',
+                }}
+              >
                 твой любимый <br /> грибной бренд
               </span>
               <button
@@ -106,17 +122,21 @@ module.exports = function Layout({ children, login }) {
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/catalog">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="/catalog"
+                    >
                       Каталог no auth
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/about">
                       О нас
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/contacts">
                       Контакты
                     </a>
                   </li>
