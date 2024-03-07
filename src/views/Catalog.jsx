@@ -220,6 +220,7 @@ module.exports = function Catalog({ goods, login, isSeller }) {
         </div>
       </main>
       <script defer src="/js/add.js" />
+      <script defer src="/js/delete.js" />
     </Layout>
   );
 };

@@ -44,4 +44,10 @@ router.post('/new', async (req, res) => {
   }
 });
 
+
+router.delete('/delete/:id', async (req, res) => {
+  await Good.destroy({ where: { id: req.params.id } });
+  res.json({ success: true })
+});
+
 module.exports = router;
