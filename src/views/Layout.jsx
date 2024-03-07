@@ -13,13 +13,26 @@ module.exports = function Layout({ children, login }) {
           href="/assets/favicon.ico"
           rel="shortcut icon"
         />
+        {/* <link
+          href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic"
+          rel="stylesheet"
+        /> */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Anta&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Kode+Mono:wght@400..700&family=Roboto+Serif:opsz@8..144&family=Ubuntu:wght@300&display=swap"
+          rel="stylesheet"
+        ></link>
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
           crossOrigin="anonymous"
         />
-        <link rel="stylesheet" href="#" />
+        {/* <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Indie+Flower&family=Kode+Mono:wght@400..700&family=Roboto+Serif:opsz@8..144&family=Ubuntu:wght@300&display=swap" rel="stylesheet"></link> */}
+        <link rel="stylesheet" href="/css/index.css" />
         <title>jmyh</title>
       </head>
       <header>
@@ -39,7 +52,9 @@ module.exports = function Layout({ children, login }) {
                   marginRight: '50px',
                 }}
               >
-                твой любимый <br /> грибной бренд
+                your favorite
+                <br />
+                mushroom brand
               </span>
               <button
                 class="navbar-toggler"
@@ -80,7 +95,13 @@ module.exports = function Layout({ children, login }) {
                   </li>
                 </ul>
               </div>
-              <a className="cart" href="/cart">
+              <a
+                className="cart"
+                href="/cart"
+                style={{
+                  marginRight: '20px',
+                }}
+              >
                 <img src="/assets/layer1.svg" alt="cart" />
               </a>
               <a href="/logout">
@@ -106,7 +127,9 @@ module.exports = function Layout({ children, login }) {
                   marginRight: '50px',
                 }}
               >
-                твой любимый <br /> грибной бренд
+                your favorite
+                <br />
+                mushroom brand
               </span>
               <button
                 class="navbar-toggler"

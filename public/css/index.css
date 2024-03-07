@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0 30px 20px 20px;
+  height: 100%;
+}
+
+body {
+  font-family: 'Kode Mono', monospace;
+  background-color: #eab790;
+}
+.goods {
+  background-color: rgb(168, 239, 164);
+  border-radius: 8px;
+  margin: 25px;
+}
+.goods:hover {
+  border: 6px solid rgb(109, 158, 210);
+}
+
+.link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.goods .link-container .good-link {
+  justify-self: end;
+}
+.media-btn{
+    text-align: 'center';
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: #00BFFF;
+    border-radius: 8px;
+}
+.media-btn:hover {
+  border: 6px solid rgb(109, 158, 210);
+}

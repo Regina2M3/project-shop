@@ -18,32 +18,26 @@ module.exports = function Contact({ login }) {
         }}
         className="contactContainer"
       >
-        <div
+        <div className='media-btn'
           style={{
-            width: '160px',
-            height: '60px',
-            textAlign: 'center',
-            padding: '10px',
-            color: 'white',
-            fontSize: '18px',
-            backgroundColor: '#00BFFF',
-            borderRadius: '8px',
+            width: '180px',
+            height: '70px',
           }}
         >
-          <a href="https://t.me/jmhoodies" target="_blank">Telegram</a>
+          <a href="https://t.me/jmhoodies" target="_blank">Telegram
+          <img src="/assets/tg.svg" alt="tg" />
+          </a>
+
         </div>
-        <div
+        <div className='media-btn'
           style={{
-            width: '90px',
-            textAlign: 'center',
-            padding: '10px',
-            color: 'white',
-            fontSize: '18px',
-            backgroundColor: '#00BFFF',
-            borderRadius: '8px',
+            width: '200px',
+            height: '80px',
           }}
         >
-          <a href="https://vk.com/jmhoodies" target="_blank">Vk</a>
+          <a href="https://vk.com/jmhoodies" target="_blank">Vkontakte
+          <img src="/assets/vk.svg" alt="vk" />
+          </a>
         </div>
       </div>
     </Layout>

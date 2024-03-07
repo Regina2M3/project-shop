@@ -5,6 +5,7 @@ const logRouter = require('./login.router');
 const catRouter = require('./catalog.router');
 const aboutRouter = require('./about.router');
 const contactRouter = require('./contacts.router');
+const showRouter =require('./show.router')
 
 module.exports = router
   .use('/', homeRouter)
@@ -12,5 +13,5 @@ module.exports = router
   .use('/login', logRouter)
   .use('/catalog', catRouter)
   .use('/about', aboutRouter)
-  .use('/contacts', contactRouter);
-// .use('/game', gameRouter)
+  .use('/contacts', contactRouter)
+  .use('/', showRouter);

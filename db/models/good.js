@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
   class Good extends Model {
     static associate({ Category, User }) {
       this.hasMany(Category, {
-        foreignKey: 'category',
+        foreignKey: 'categoryId',
       });
       this.belongsToMany(User, {
         through: 'Order',
@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   Good.init(
     {
       name: DataTypes.STRING,
-      category: DataTypes.INTEGER,
+      categoryId: DataTypes.INTEGER,
       description: DataTypes.STRING,
       price: DataTypes.STRING,
       amount: DataTypes.INTEGER,

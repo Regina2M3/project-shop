@@ -7,26 +7,48 @@ const Catalog = require('../views/Catalog.jsx');
 // const Edit = require('../views/');
 // const Add = require('../views/');
 // const Show = require('../views/');
-const { Good } = require('../../db/models');
+const { Good, Category } = require('../../db/models');
 
 const router = express.Router();
 
 router.get('/', async (req, res) => {
   const { login, isSeller } = req.session;
-  const goods = await Good.findAll();
-
+  const goods = await Good.findAll({order: [['categoryId', 'ASC']]});
   renderTemplate(Catalog, { goods, login, isSeller }, res);
 });
+// router.get('/', async (req, res) => {
+//   const { login, isSeller } = req.session;
+//   const categories = await Category.findAll({ order: [['id', 'ASC']] });
+//   renderTemplate(Catalog, { categories, login, isSeller }, res);
+// });
+
+// router.get('/:categoryId', async (req, res) => {
+//   const { login, isSeller } = req.session;
+//   const { id } = req.params;
+//   const category = await Category.findOne({ where: { id } });
+//   const goods = await Good.findAll({ where: { category: parseInt(id) } });
+//   renderTemplate(
+//     Catalog,
+//     {
+//       category,
+//       goods,
+//       login,
+//       isSeller,
+//     },
+//     res
+//   );
+// });
 
 router.post('/new', async (req, res) => {
   const { login, isSeller } = req.session;
   if (isSeller) {
     try {
-      const { name, category, description, price, amount, picture } = req.body;
+      const { name, categoryId, description, price, amount, picture } =
+        req.body;
       console.log('это рек бади', req.body);
       const newProd = await Good.create({
         name,
-        category,
+        categoryId,
         description,
         price,
         amount,
@@ -44,10 +66,9 @@ router.post('/new', async (req, res) => {
   }
 });
 
-
 router.delete('/delete/:id', async (req, res) => {
   await Good.destroy({ where: { id: req.params.id } });
-  res.json({ success: true })
+  res.json({ success: true });
 });
 
 module.exports = router;

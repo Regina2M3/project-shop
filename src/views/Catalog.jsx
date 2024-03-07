@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('../views/Layout');
 
-module.exports = function Catalog({ goods, login, isSeller }) {
+module.exports = function Catalog({ goods, login, isSeller, category }) {
   return (
     <Layout login={login}>
       <h1>all products:</h1>
@@ -17,14 +17,35 @@ module.exports = function Catalog({ goods, login, isSeller }) {
           {isSeller ? (
             <>
               <div
+                className="modalBtn"
+                style={{
+                  width: '190px',
+                  height: '150px',
+                }}
+              >
+                <button
+                  type="button"
+                  className="btn btn-outline-secondary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginModal"
+                  style={{
+                    width: '90px',
+                    height: '50px',
+                  }}
+                >
+                  add item
+                </button>
+              </div>
+              <div
                 className="good-container"
                 style={{
                   display: 'flex',
                   flexDirection: 'row',
+                  flexWrap: 'wrap',
                   gap: '20px',
                 }}
               >
-                <button
+                {/* <button
                   type="button"
                   className="btn btn-outline-secondary"
                   data-bs-toggle="modal"
@@ -35,7 +56,7 @@ module.exports = function Catalog({ goods, login, isSeller }) {
                   }}
                 >
                   add item
-                </button>
+                </button> */}
                 {goods.map((good) => (
                   <>
                     <div
@@ -44,23 +65,23 @@ module.exports = function Catalog({ goods, login, isSeller }) {
                       style={{
                         display: 'flex',
                         flexDirection: 'column',
+                        padding: '10px',
+                        width: '210px',
                       }}
                     >
                       <img
+                        className="good-pic"
                         src={good.picture}
                         alt="goodpic"
                         style={{
-                          width: '150px',
+                          width: '190px',
                         }}
                       />
 
                       <div className="name">{good.name}</div>
                       <div className="link-container">
                         <div className="good-link">
-                          <a href={`good/show/${good.id}`}>show</a>
-                        </div>
-                        <div className="good-link">
-                          <a href={`goods/edit/${good.id}`}>edit</a>
+                          <a href={`catalog/${good.id}`}>show</a>
                         </div>
                         <button className="delBtn" type="button" id={good.id}>
                           delete
@@ -189,33 +210,55 @@ module.exports = function Catalog({ goods, login, isSeller }) {
               </div>
             </>
           ) : (
-            <div
-              className="good-container"
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-              }}
-            >
-              {goods.map((good) => (
-                <>
-                  <div className="goods" key={good.id}>
-                    <img
-                      src={good.picture}
-                      alt="goodpic"
+            <>
+              <div
+                className="modalBtn"
+                style={{
+                  width: '190px',
+                  height: '150px',
+                }}
+              ></div>
+              <div
+                className="good-container"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  flexWrap: 'wrap',
+                  gap: '20px',
+                }}
+              >
+                {goods.map((good) => (
+                  <>
+                    <div
+                      className="goods"
+                      key={good.id}
                       style={{
-                        width: '150px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        padding: '10px',
+                        width: '210px',
                       }}
-                    />
-                  </div>
-                  <div className="name">{good.name}</div>
-                  <div className="link-container">
-                    <div className="good-link">
-                      <a href={`good/show/${good.id}`}>show</a>
+                    >
+                      <img
+                        className="good-pic"
+                        src={good.picture}
+                        alt="goodpic"
+                        style={{
+                          width: '190px',
+                        }}
+                      />
+
+                      <div className="name">{good.name}</div>
+                      <div className="link-container">
+                        <div className="good-link">
+                          <a href={`catalog/${good.id}`}>show</a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </>
-              ))}
-            </div>
+                  </>
+                ))}
+              </div>
+            </>
           )}
         </div>
       </main>

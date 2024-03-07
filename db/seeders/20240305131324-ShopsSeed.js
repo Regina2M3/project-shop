@@ -27,7 +27,7 @@ module.exports = {
       [
         {
           name: 'Футболка-оверсайз HAVE NO FEAR, MY CHILD серая',
-          category: 1,
+          categoryId: 1,
           description: 'Состав: 100% хлопок',
           price: '1 850 rub.',
           amount: 25,
@@ -36,7 +36,7 @@ module.exports = {
         },
         {
           name: 'Футболка-оверсайз "Кибержмых" белая',
-          category: 1,
+          categoryId: 1,
           description: 'Состав: 100% хлопок',
           price: '1 350 rub.',
           amount: 15,
@@ -45,7 +45,7 @@ module.exports = {
         },
         {
           name: 'Футболка-оверсайз TOXIC DEMON',
-          category: 1,
+          categoryId: 1,
           description: 'Состав: 100% хлопок',
           price: '1 250 rub.',
           amount: 15,
@@ -54,7 +54,7 @@ module.exports = {
         },
         {
           name: 'Футболка ВСЕ В МОЕЙ ГОЛОВЕ',
-          category: 1,
+          categoryId: 1,
           description: 'Состав: 100% хлопок',
           price: '1 250 rub.',
           amount: 15,
@@ -63,7 +63,7 @@ module.exports = {
         },
         {
           name: 'Свитшот HAVE NO FEAR, MY CHILD небесно-голубой',
-          category: 2,
+          categoryId: 2,
           description: 'Состав: 80% хлопок, 20% полиэстер. Шелкография.',
           price: '3 850 rub.',
           amount: 20,
@@ -72,7 +72,7 @@ module.exports = {
         },
         {
           name: 'Свитшот HAVE NO FEAR, MY CHILD черный',
-          category: 2,
+          categoryId: 2,
           description: 'Состав: 80% хлопок, 20% полиэстер. Шелкография.',
           price: '3 850 rub.',
           amount: 20,
@@ -81,7 +81,7 @@ module.exports = {
         },
         {
           name: 'Носки "GOREFIELD"',
-          category: 3,
+          categoryId: 3,
           description: 'Эти носки – ключ к приключению на каждом шагу, смело вносящие в ваш образ нотку безумия и уникальности.',
           price: '450 rub.',
           amount: 35,
@@ -90,7 +90,7 @@ module.exports = {
         },
         {
           name: 'Носки МУХОМОРЫ',
-          category: 3,
+          categoryId: 3,
           description: 'Представьте, вы идете по лесу, и вдруг видите загадочный гриб с белыми пятнами. "О, как красиво!" - думаете вы. Нагибаетесь, чтобы рассмотреть получше... и обнаруживаете, что это вовсе не гриб, а ваш носок!',
           price: '450 rub.',
           amount: 35,
@@ -99,7 +99,7 @@ module.exports = {
         },
         {
           name: 'Носки АНГЕЛЫ',
-          category: 3,
+          categoryId: 3,
           description: 'Носки с ангелами от нашего бренда в эстетике Dreamcore, мягкие и качественные! Автор дизайна: Анна Мальмстрем',
           price: '490 rub.',
           amount: 30,
@@ -108,7 +108,7 @@ module.exports = {
         },
         {
           name: 'Стикерпак "Yabujincore"',
-          category: 4,
+          categoryId: 4,
           description: 'Виниловый голографический стикерпак с резкой и матовой ламинацией формата. Не боится воды',
           price: '350 rub.',
           amount: 20,
@@ -117,7 +117,7 @@ module.exports = {
         },
         {
           name: 'Стикерпак "Грибы" А5',
-          category: 4,
+          categoryId: 4,
           description: 'Виниловый стикерпак с матовой ламинацией и резкой, не стирается, не боится воды',
           price: '350 rub.',
           amount: 40,
@@ -126,7 +126,7 @@ module.exports = {
         },
         {
           name: 'Металлический пин "Кумар"',
-          category: 5,
+          categoryId: 5,
           description: 'Металлический пин с двумя креплениями и "бензиновым" покрытием',
           price: '550 rub.',
           amount: 10,
@@ -135,7 +135,7 @@ module.exports = {
         },
         {
           name: 'Пин "Козочка" светящийся',
-          category: 5,
+          categoryId: 5,
           description: 'Металлический пин 35м. Светится в ультрафиолете!',
           price: '450 rub.',
           amount: 10,
