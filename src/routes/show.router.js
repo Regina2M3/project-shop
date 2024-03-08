@@ -14,4 +14,6 @@ router.get('/catalog/:id', async (req, res) => {
   renderTemplate(Show, { good, login, isSeller }, res);
 });
 
+
+
 module.exports = router;

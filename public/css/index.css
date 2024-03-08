@@ -45,3 +45,10 @@ body {
 .media-btn:hover {
   border: 6px solid rgb(109, 158, 210);
 }
+.edit-form{
+    display: flex;
+    flex-direction: column;
+}
+.edit-input{
+    margin: 15px;
+}

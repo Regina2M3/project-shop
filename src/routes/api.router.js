@@ -5,7 +5,9 @@ const logRouter = require('./login.router');
 const catRouter = require('./catalog.router');
 const aboutRouter = require('./about.router');
 const contactRouter = require('./contacts.router');
-const showRouter =require('./show.router')
+const showRouter = require('./show.router');
+const cartRouter = require('./cart.router');
+const editRouter = require('./edit.router');
 
 module.exports = router
   .use('/', homeRouter)
@@ -14,4 +16,6 @@ module.exports = router
   .use('/catalog', catRouter)
   .use('/about', aboutRouter)
   .use('/contacts', contactRouter)
-  .use('/', showRouter);
+  .use('/', showRouter)
+  .use('/cart', cartRouter)
+  .use('/show', editRouter);

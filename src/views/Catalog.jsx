@@ -79,12 +79,18 @@ module.exports = function Catalog({ goods, login, isSeller, category }) {
                       />
 
                       <div className="name">{good.name}</div>
-                      <div className="link-container">
+                      <div className="link-container" style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                      }}>
                         <div className="good-link">
                           <a href={`catalog/${good.id}`}>show</a>
                         </div>
-                        <button className="delBtn" type="button" id={good.id}>
-                          delete
+                        <button className="delBtn" type="button" id={good.id} style={{
+                          width: '90px',
+                        }}>
+                           delete
                         </button>
                       </div>
                     </div>
@@ -128,7 +134,7 @@ module.exports = function Catalog({ goods, login, isSeller, category }) {
                         </div>
                         <div className="form-group help mb-4">
                           <input
-                            name="category"
+                            name="categoryId"
                             type="text"
                             tabIndex="2"
                             autoComplete="current-email"

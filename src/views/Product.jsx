@@ -3,7 +3,7 @@ const Layout = require('./Layout');
 
 module.exports = function Product({ good, login, isSeller }) {
   return (
-    <Layout login={login} isSeller = {isSeller}>
+    <Layout login={login} isSeller={isSeller}>
       <main
         className="content-wrapper"
         role="main"
@@ -12,17 +12,25 @@ module.exports = function Product({ good, login, isSeller }) {
           flexDirection: 'row',
         }}
       >
-        <div className="left">
+        <div
+          className="left"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
           <img
             src={good.picture}
             style={{
-              width: '150px',
+              width: '350px',
+              margin: '10px',
+              borderRadius: '8px',
             }}
           ></img>
           {isSeller ? (
-            <div>editadmin
-              <button type='button'>edit</button>
-            </div>
+            <a href={`/show/edit/${good.id}`}>
+              <button type="button">edit</button>
+            </a>
           ) : (
             <></>
           )}
@@ -39,6 +47,9 @@ module.exports = function Product({ good, login, isSeller }) {
           <div>О товаре: {good.description}</div>
           <div>Цена: {good.price}</div>
           <div>В наличии: {good.amount}</div>
+          <div className="add-btn">
+            <a href={`/cart/add/${good.id}`}>add to cart</a>
+          </div>
         </div>
       </main>
     </Layout>

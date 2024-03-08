@@ -88,11 +88,6 @@ module.exports = function Layout({ children, login }) {
                       Контакты
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">
-                      Хочу сотрудничать!
-                    </a>
-                  </li>
                 </ul>
               </div>
               <a
@@ -161,11 +156,6 @@ module.exports = function Layout({ children, login }) {
                   <li class="nav-item">
                     <a class="nav-link" href="/contacts">
                       Контакты
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">
-                      Хочу сотрудничать!
                     </a>
                   </li>
                 </ul>
